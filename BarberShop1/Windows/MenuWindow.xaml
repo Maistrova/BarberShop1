@@ -1,0 +1,93 @@
+﻿<Window x:Class="BarberShop1.Windows.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BarberShop1.Windows"
+        mc:Ignorable="d"
+        Height="450" Width="800"
+        WindowStyle="none">
+    <Grid Background="#FF191919">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+        <Image Source="/Image/BarberShopThree1.jpg" 
+               Grid.Row="0" Stretch="Fill"
+               />
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Image Source="/Image/hairdresser.png" 
+                   Height="300"
+                   Width="400"/>
+            <Image Source="/Image/barber (1).png" 
+                   Height="300"
+                   Width="400"/>
+        </StackPanel>
+
+
+
+
+        <Grid Grid.Row="0" Background="Transparent">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="BarberShop"                    
+                   Foreground="#F5EEE6"
+                   FontSize="50"
+                   FontFamily="Garamond"
+                   Margin="0 10 30 10"
+                   FontWeight="Bold"/>
+
+                <Button Background="Transparent" 
+                Margin="10 10 5 5"
+                    
+                    BorderBrush="Transparent" 
+                    BorderThickness="0" 
+                    Foreground="#F5EEE6" 
+                    FontSize="25" 
+                    Height="40" 
+                    Width="140" 
+                    x:Name="ClientsBt"                      
+                    Content="Клиенты"                     
+                    FontFamily="Garamond" 
+                    Style="{StaticResource AaaactBt}" 
+                    Click="ClientsBt_Click"/>
+
+                <Button Background="Transparent" 
+                Margin="10 10 5 5"
+                    
+                    BorderBrush="Transparent" 
+                    BorderThickness="0" 
+                    Foreground="#F5EEE6" 
+                    FontSize="25" 
+                    Height="40" 
+                    Width="140" 
+                    x:Name="PersonalBt"                      
+                    Content="Персонал"                     
+                    FontFamily="Garamond" 
+                    Style="{StaticResource AaaactBt}" 
+                    Click="PersonalBt_Click"/>
+
+                <Button Background="Transparent" 
+                Margin="10 10 5 5"
+                        
+                    BorderBrush="Transparent" 
+                    BorderThickness="0" 
+                    Foreground="#F5EEE6" 
+                    FontSize="25" 
+                    Height="40" 
+                    Width="110" 
+                    x:Name="ServicesBt"                      
+                    Content="Услуги"                     
+                    FontFamily="Garamond" 
+                    Style="{StaticResource AaaactBt}" 
+                    Click="ServicesBt_Click"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Frame
+                Name="MainFrame"
+                NavigationUIVisibility="Hidden"
+            />
+        </Grid>
+    </Grid>
+</Window>

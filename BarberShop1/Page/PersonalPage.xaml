@@ -1,0 +1,233 @@
+﻿<Page x:Class="BarberShop1.Page.PersonalPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BarberShop1.Page"
+      mc:Ignorable="d" 
+      Height="340" Width="770">
+
+    <Grid Background="#FF191919">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2.8*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock FontSize="20"
+                   Text="Поиск"
+                   Foreground="#F5EEE6" 
+                   FontFamily="Garamond"
+                   FontWeight="Bold"
+                   />
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBox  HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="0 20"
+                Width="300"
+                Height="25"
+                Background="Transparent" 
+                BorderBrush="#F5EEE6" 
+                BorderThickness="1"
+                VerticalContentAlignment="Center"
+                FontSize="15"
+                Foreground="#F5EEE6"
+                      Name="PoiskTB"
+                      TextChanged="PoiskTB_TextChanged"/>
+        </StackPanel>
+        <Border Margin="0 5 0 25" BorderBrush="#fff" Opacity="0.2" CornerRadius="10" BorderThickness="2" Grid.Column="1"/>
+        <StackPanel VerticalAlignment="Top" Grid.Column="1">
+            <TextBlock 
+                    Text="Новый сотрудник" 
+                    FontSize="20"                    
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center"
+                    Margin="0 6 0 0"
+                    Foreground="#F5EEE6" 
+                   FontFamily="Garamond"
+                   FontWeight="Bold"/>
+            <StackPanel>
+                <TextBlock
+                        Text="Фамилия"
+                       Foreground="#F5EEE6" 
+                   FontFamily="Garamond"
+                   FontWeight="Bold"
+                        Margin="10 0 0 0"/>
+                <TextBox
+                        x:Name="SurnameNewTB"                        
+                        Width="190"
+                        Background="Transparent" 
+            BorderBrush="#F5EEE6" 
+            BorderThickness="1"
+                    Foreground="#F5EEE6"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock
+                        Text="Имя"
+                        Foreground="#F5EEE6" 
+                   FontFamily="Garamond"
+                   FontWeight="Bold"
+                        Margin="10 5 0 0"/>
+                <TextBox
+                        x:Name="NameNewTB"                       
+                        Width="190"
+                        Background="Transparent" 
+            BorderBrush="#F5EEE6" 
+            BorderThickness="1"
+                    Foreground="#F5EEE6"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock
+                        Text="Отчество"
+                        Foreground="#F5EEE6" 
+                   FontFamily="Garamond"
+                   FontWeight="Bold"
+                        Margin="10 5 0 0"/>
+                <TextBox
+                        x:Name="PatronymicNewTB"                      
+                        Width="190"
+                        Background="Transparent" 
+                        BorderBrush="#F5EEE6" 
+                        BorderThickness="1"
+                        Foreground="#F5EEE6"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock
+                        Text="Должность"
+                        Foreground="#F5EEE6" 
+                        FontFamily="Garamond"
+                        FontWeight="Bold"
+                        Margin="10 5 0 0"/>
+                <ComboBox
+                        x:Name="JobTitleNewCB" 
+                    DisplayMemberPath="NamePost"
+                    Width="190"
+                    Height="18"
+                    Background="Transparent" 
+                    BorderBrush="#F5EEE6" 
+                    BorderThickness="1"
+                    FontSize="10"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock
+                        Text="Пол"
+                        Foreground="#F5EEE6" 
+                        FontFamily="Garamond"
+                        FontWeight="Bold"
+                        Margin="10 5 0 0"/>
+                <ComboBox
+                   x:Name="GenderNewCB"  
+                   DisplayMemberPath="NamePaul"
+                   Width="190"
+                   Height="18"
+                   Background="Transparent" 
+                   BorderBrush="#F5EEE6" 
+                   BorderThickness="1"
+                    FontSize="10"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock
+                        Text="Логин"
+                        Margin="10 5 0 0"
+                        Foreground="#F5EEE6" 
+                   FontFamily="Garamond"
+                   FontWeight="Bold"/>
+                <TextBox
+                        x:Name="LoginNewTB"                       
+                        Width="190"
+                        Background="Transparent" 
+            BorderBrush="#F5EEE6" 
+            BorderThickness="1"
+                    Foreground="#F5EEE6"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock
+                        Text="Пароль"
+                        Margin="10 5 0 0"
+                        Foreground="#F5EEE6" 
+                   FontFamily="Garamond"
+                   FontWeight="Bold"/>
+                <TextBox
+                    x:Name="PasswordNewTB"                       
+                    Width="190"
+                    Background="Transparent" 
+                    BorderBrush="#F5EEE6" 
+                    BorderThickness="1"
+                    Foreground="#F5EEE6"/>
+                <Button x:Name="AddBt2" 
+                    Click="AddBt2_Click"
+                    FontWeight="Bold"
+                    Margin="0 4.5 0 0"
+                    Height="20" 
+                    Width="100"
+                    Content="Добавить"
+                    Style="{StaticResource AaaactBt}"
+                    BorderBrush="Transparent" 
+                    BorderThickness="0" 
+                    Foreground="#FF191919" 
+                    FontSize="15"
+                    FontFamily="Garamond" Background="#FFF5EEE6"/>
+                <Button x:Name="DeleteBt2"
+                    Click="DeleteBt2_Click"
+                    FontWeight="Bold"
+                    Margin="0 5 0 5"
+                    Height="20" 
+                    Width="100"
+                    Content="Удалить"
+                    Style="{StaticResource AaaactBt}"
+                    BorderBrush="Transparent" 
+                    BorderThickness="0" 
+                    Foreground="#FF191919" 
+                    FontSize="15"
+                    FontFamily="Garamond" Background="#FFE04461"/>
+            </StackPanel>
+        </StackPanel>
+        <ListBox
+            Margin="10 50 10 10"
+            x:Name="LBPersonal"
+            VirtualizingPanel.ScrollUnit="Pixel">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border Margin="20" Height="auto" CornerRadius="0" Width="600" BorderBrush="Transparent" BorderThickness="0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="170"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="1">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="ФИО сотрудника:"/>
+                                    <TextBlock Text="{Binding SurnameEmployee}" Margin="10 0 0 0"/>
+                                    <TextBlock Text="{Binding NameEmployee}" Margin="5 0 0 0"/>
+                                    <TextBlock Text="{Binding PatronymicEmployee}" Margin="5 0 0 0"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Должность:"/>
+                                    <TextBlock Text="{Binding PostTable.NamePost}" Margin="5 0 0 0"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Пол:"/>
+                                    <TextBlock Text="{Binding PaulTable.NamePaul}" Margin="5 0 0 0"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Логин:"/>
+                                    <TextBlock Text="{Binding LoginEmployee}" Margin="5 0 0 0"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Пароль:"/>
+                                    <TextBlock Text="{Binding PasswordEmployee}" Margin="5 0 0 0"/>
+                                </StackPanel>
+                            </StackPanel>
+                            <Grid>
+                                <Image 
+                                Width="140"
+                                Height="140"
+                                Source="{Binding ImageEmployeeTable.CodImage}"
+                                Stretch="UniformToFill"/>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Page>

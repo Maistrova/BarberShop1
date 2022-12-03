@@ -1,0 +1,85 @@
+﻿<Window x:Class="BarberShop1.Windows.AuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BarberShop1.Windows"
+        mc:Ignorable="d"
+        Title="AuthorizationWindow" Height="450" Width="800"
+        WindowStyle="none"
+        Icon="/Image/free-icon-razor-8352188.png">
+<Grid>
+        
+        <!--<Image HorizontalAlignment="Right"
+            Margin="0 0 0 0"
+            Height="500"
+            Width="500"
+            Source="/Image/free-icon-razor-8352188.png" />-->
+
+<Image Source="/Image/BarberShopThreeBlack.jpg" Stretch="UniformToFill" 
+       />
+
+
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40 100 0 0" Orientation="Horizontal">
+            <TextBlock 
+                Text="BarberShop" 
+                HorizontalAlignment="Center"
+                Foreground="#F5EEE6"
+                FontSize="60"
+                FontFamily="Garamond"
+                Margin="20"
+                FontWeight="Bold"
+                />
+        </StackPanel>
+        <StackPanel Margin="80 130 5 0" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left">
+                <TextBlock Text="Логин" 
+                           Foreground="#F5EEE6" 
+                           FontSize="20" 
+                           FontFamily="Garamond"
+                           />
+                <TextBox Background="Transparent"
+                         BorderBrush="#F5EEE6" 
+                         BorderThickness="1" 
+                         Height="40" 
+                         Width="300"
+                         VerticalContentAlignment="Center"
+                         FontSize="20"
+                         Foreground="#F5EEE6"
+                         Name="LoginTextBox"/>
+            </StackPanel>
+            <StackPanel Margin="0 5 0 0" VerticalAlignment="Center" HorizontalAlignment="Left">
+                <TextBlock Text="Пароль" 
+                           Foreground="#F5EEE6" 
+                           FontSize="20" 
+                           FontFamily="Garamond"
+                           />
+                <PasswordBox Background="Transparent" 
+                             BorderBrush="#F5EEE6" 
+                             BorderThickness="1" 
+                             Height="40" 
+                             Width="300"
+                             VerticalContentAlignment="Center"
+                         FontSize="20"
+                         Foreground="#F5EEE6"
+                             Name="PasswordPasswordBox"/>
+            </StackPanel>
+            <Button Background="#FFF5EEE6" 
+                    BorderBrush="Transparent" 
+                    BorderThickness="0" 
+                    Foreground="#FF191919" 
+                    FontSize="25"
+                    FontWeight="Bold"
+                    Margin="0 20 0 0" 
+                    Height="40" 
+                    Width="100" 
+                    x:Name="Enter" 
+                    Click="Enter_Click" 
+                    Content="Войти" 
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center"
+                    FontFamily="Garamond" 
+                    Style="{StaticResource AaaactBt}" />
+        </StackPanel>
+    </Grid>
+</Window>
