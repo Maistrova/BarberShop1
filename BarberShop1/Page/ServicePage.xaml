@@ -142,7 +142,7 @@
                         </Grid.RowDefinitions>
                         <Border CornerRadius="10" Background="#161b22" Margin="25" VerticalAlignment="Top">
                             <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Background="Transparent">
-                                <Border CornerRadius="30" Height="Auto" Width="220">
+                                <Border CornerRadius="0" Height="Auto" Width="220">
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="60"/>
